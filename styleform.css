@@ -1,0 +1,150 @@
+:root{
+    --background-color:rgb(49, 49, 49);
+    --font-color:rgb(222, 222, 222);
+    --hover-background:linear-gradient(45deg,green,orange,green);
+    --hover-font:rgb(202, 202, 202);
+}
+@keyframes gradientpulse{
+    from{
+        background-position: left;
+    }
+    50%{
+        background-position: right;
+    }
+    to{
+        background-position: left;
+    }
+}
+@keyframes bubble{
+    from{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+body{
+    padding-top: 50px;
+    background-color: var(--background-color);
+}
+.bdymain{
+    background-image: linear-gradient(45deg,green,orange,green);
+    animation-name: gradientpulse;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background-size: 500%;
+    background-position: left;
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    border-radius: 15px;
+    border: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.bdy{
+    border:0px;
+    padding-top:40px;
+    border-radius: 15px;
+    padding-bottom: 40px;
+    align-content: center;
+    text-align: center;
+    background:var(--background-color);
+}
+p{
+    color:var(--font-color);
+    font-size: large;
+    transition: 1s;
+}
+p:hover{
+    background-image:var(--hover-background);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .5s;
+    animation-name: gradientpulse;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform: scale(1.2);
+}
+.tarea{
+    border:0px;
+    width: 50%;
+    height: 35px;
+    color:rgb(31, 28, 28);
+    transition: 0.5s;
+    border-radius: 8px;
+    background-color: rgb(216, 207, 207);
+}
+.tarea::placeholder{
+    text-align: center;
+}
+.tarea:hover::placeholder{
+    transition: 0.5s;
+    color:var(--font-color);
+}
+.tarea:hover{
+    animation-name: gradientpulse;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+    background-image:var(--hover-background);
+    background-size: 500%;
+    transform: scale(1.1);
+}
+.tarea:active
+{
+    transition: .1s;
+    transform: scale(0.9);
+}
+
+.sub
+{
+    transition: background-position 1s,transform 0.5s;
+    border-radius: 8px;
+    border:0px;
+    background-image:linear-gradient(45deg,orange,green);
+    background-size: 300%;
+    background-position: right;
+    color:var(--font-color);
+    width:5lh;
+    height:40px;
+    animation-name:bubble;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.sub:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition:0.5s;
+    background-position: left;
+}
+.sub:active{
+    transition: .1s;
+    transform: scale(0.9);
+    background-position: left;
+}
+.H{
+    animation-name: gradientpulse;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    background-image:linear-gradient(45deg,green,orange,green);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:20px;
+    transition: 0.5s;
+}
